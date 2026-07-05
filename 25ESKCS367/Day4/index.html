@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Counter App</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(-45deg,#00c6ff,#0072ff,#8e2de2,#ff6a00);
+background-size:400% 400%;
+animation:gradient 12s ease infinite;
+transition:.5s;
+}
+
+@keyframes gradient{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.card-box{
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(15px);
+padding:40px;
+border-radius:20px;
+text-align:center;
+width:360px;
+box-shadow:0 10px 30px rgba(0,0,0,.3);
+transition:.4s;
+}
+
+.card-box:hover{
+transform:scale(1.05);
+}
+
+h1{
+color:white;
+margin-bottom:20px;
+}
+
+.counter{
+font-size:70px;
+font-weight:bold;
+color:white;
+margin:20px;
+transition:.3s;
+}
+
+button{
+margin:8px;
+transition:.3s;
+}
+
+button:hover{
+transform:translateY(-5px) scale(1.08);
+}
+
+.dark{
+background:#111 !important;
+animation:none;
+}
+
+.dark .card-box{
+background:rgba(0,0,0,.6);
+color:white;
+}
+
+.mode-btn{
+position:absolute;
+top:20px;
+right:20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<button class="btn btn-warning mode-btn" id="modeBtn">
+🌙 Dark Mode
+</button>
+
+<div class="card-box">
+
+<h1>Counter App</h1>
+
+<div class="counter" id="count">0</div>
+
+<button class="btn btn-success" id="plus">
+➕ Plus
+</button>
+
+<button class="btn btn-danger" id="minus">
+➖ Minus
+</button>
+
+<button class="btn btn-primary" id="reset">
+🔄 Reset
+</button>
+
+</div>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<script>
+
+let count=0;
+
+$("#plus").click(function(){
+count++;
+$("#count").fadeOut(100).fadeIn(100).text(count);
+});
+
+$("#minus").click(function(){
+count--;
+$("#count").fadeOut(100).fadeIn(100).text(count);
+});
+
+$("#reset").click(function(){
+count=0;
+$("#count").fadeOut(100).fadeIn(100).text(count);
+});
+
+$("#modeBtn").click(function(){
+
+$("body").toggleClass("dark");
+
+if($("body").hasClass("dark")){
+$(this).text("☀️ Light Mode");
+}
+else{
+$(this).text("🌙 Dark Mode");
+}
+
+});
+
+</script>
+
+</body>
+</html>

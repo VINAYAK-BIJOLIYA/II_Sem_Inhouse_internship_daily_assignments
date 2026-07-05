@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Super Learners | Professional IT Training Institute</title>
+<meta name="description" content="Super Learners — Professional IT Training, Live Projects, Certifications & Placement Assistance.">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Bootstrap 5 CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ PRELOADER ============ -->
+<div id="preloader">
+  <div class="loader-ring"></div>
+</div>
+
+<!-- ============ NAVBAR ============ -->
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNavbar">
+  <div class="container">
+    <a class="navbar-brand" href="#home"><i class="bi bi-mortarboard-fill"></i>Super <span>Learners</span></a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+      <i class="bi bi-list fs-2"></i>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
+      <ul class="navbar-nav align-items-lg-center gap-lg-2">
+        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#courses">Courses</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="nav-item mt-2 mt-lg-0 ms-lg-3"><a href="#" class="btn btn-outline-gradient btn-sm">Login</a></li>
+        <li class="nav-item mt-2 mt-lg-0 ms-lg-2"><a href="#" class="btn btn-gradient btn-sm">Register</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ HERO SECTION ============ -->
+<section class="hero" id="home">
+  <div class="hero-blob blob-1"></div>
+  <div class="hero-blob blob-2"></div>
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <span class="hero-badge"><i class="bi bi-stars"></i> #1 Rated Training Institute</span>
+        <h1>Learn Today, <span class="text-gradient">Lead Tomorrow</span></h1>
+        <p class="lead">Professional IT Training, Live Projects, Certifications &amp; Placement Assistance.</p>
+        <div class="d-flex flex-wrap gap-3">
+          <a href="#courses" class="btn btn-gradient btn-lg">Explore Courses <i class="bi bi-arrow-right ms-1"></i></a>
+          <a href="#contact" class="btn btn-outline-gradient btn-lg">Contact Us</a>
+        </div>
+        <div class="hero-stats">
+          <div>
+            <h3 class="text-gradient">15K+</h3>
+            <span>Students Trained</span>
+          </div>
+          <div>
+            <h3 class="text-gradient">50+</h3>
+            <span>Expert Trainers</span>
+          </div>
+          <div>
+            <h3 class="text-gradient">200+</h3>
+            <span>Hiring Partners</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="hero-illustration">
+          <div class="hero-main-visual">
+            <i class="bi bi-laptop"></i>
+          </div>
+          <div class="hero-card-float card-float-1">
+            <i class="bi bi-patch-check-fill"></i>
+            <div>
+              <strong class="d-block" style="font-size:0.9rem;">Certified</strong>
+              <small class="text-secondary">Industry Recognized</small>
+            </div>
+          </div>
+          <div class="hero-card-float card-float-2">
+            <i class="bi bi-briefcase-fill"></i>
+            <div>
+              <strong class="d-block" style="font-size:0.9rem;">95% Placed</strong>
+              <small class="text-secondary">Career Support</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COURSES SECTION ============ -->
+<section id="courses">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <span class="section-tag">Our Courses</span>
+      <h2 class="section-heading">Courses That Build <span class="text-gradient">Careers</span></h2>
+      <p class="section-sub mx-auto">Industry-aligned curriculum designed with live projects, mentorship and certification support.</p>
+    </div>
+    <div class="row g-4" id="courseGrid">
+      <!-- Course cards injected via loop below (static markup) -->
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES SECTION ============ -->
+<section id="services" class="bg-light-section">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <span class="section-tag">What We Do</span>
+      <h2 class="section-heading">Our <span class="text-gradient">Services</span></h2>
+      <p class="section-sub mx-auto">End-to-end technology &amp; growth solutions for businesses and career-focused individuals.</p>
+    </div>
+    <div class="row g-4" id="serviceGrid"></div>
+  </div>
+</section>
+
+<!-- ============ WHY CHOOSE US ============ -->
+<section id="why">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <span class="section-tag">Why Super Learners</span>
+      <h2 class="section-heading">Why Choose <span class="text-gradient">Super Learners</span></h2>
+      <p class="section-sub mx-auto">We combine mentorship, real projects and placement support to make you industry-ready.</p>
+    </div>
+    <div class="row g-4" id="whyGrid"></div>
+  </div>
+</section>
+
+<!-- ============ TEAM SECTION ============ -->
+<section id="team" class="bg-light-section">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <span class="section-tag">Our People</span>
+      <h2 class="section-heading">Meet Our <span class="text-gradient">Team</span></h2>
+      <p class="section-sub mx-auto">The experts driving Super Learners' mission of quality tech education.</p>
+    </div>
+    <div class="row g-4" id="teamGrid"></div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section id="testimonials">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <span class="section-tag">Testimonials</span>
+      <h2 class="section-heading">What Our <span class="text-gradient">Students Say</span></h2>
+    </div>
+    <div id="testimonialCarousel" class="carousel slide reveal" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <div class="testimonial-card">
+            <div class="testimonial-img"><i class="bi bi-person-fill"></i></div>
+            <div class="testimonial-stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p class="testimonial-text">"Super Learners completely changed my career path. The Full Stack course was practical, and the placement team helped me land my first developer job."</p>
+            <div class="testimonial-name">Ankit Sharma</div>
+            <div class="testimonial-role">Full Stack Developer, Infosys</div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="testimonial-card">
+            <div class="testimonial-img"><i class="bi bi-person-fill"></i></div>
+            <div class="testimonial-stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p class="testimonial-text">"The Data Science program gave me real project experience with actual datasets. Trainers were always available for doubts, even after class hours."</p>
+            <div class="testimonial-name">Priya Verma</div>
+            <div class="testimonial-role">Data Analyst, TCS</div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="testimonial-card">
+            <div class="testimonial-img"><i class="bi bi-person-fill"></i></div>
+            <div class="testimonial-stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p class="testimonial-text">"Affordable fees, flexible online + offline classes, and a certificate that actually got noticed by recruiters. Highly recommend Super Learners."</p>
+            <div class="testimonial-name">Rahul Mehta</div>
+            <div class="testimonial-role">UI/UX Designer, Freelancer</div>
+          </div>
+        </div>
+
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+      <div class="carousel-indicators position-relative mt-4">
+        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT SECTION ============ -->
+<section id="contact" class="bg-light-section">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <span class="section-tag">Get In Touch</span>
+      <h2 class="section-heading">Contact <span class="text-gradient">Super Learners</span></h2>
+      <p class="section-sub mx-auto">Have a question about a course or service? Send us a message and our team will get back to you.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-7 reveal">
+        <div class="contact-form-card">
+          <form id="contactForm">
+            <div class="row">
+              <div class="col-md-6">
+                <label class="form-label small fw-semibold">Full Name</label>
+                <input type="text" class="form-control" placeholder="Your full name" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label small fw-semibold">Email</label>
+                <input type="email" class="form-control" placeholder="you@example.com" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <label class="form-label small fw-semibold">Phone Number</label>
+                <input type="tel" class="form-control" placeholder="+91 00000 00000" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label small fw-semibold">Course Interested</label>
+                <select class="form-control form-select" required>
+                  <option value="" selected disabled>Select a course</option>
+                  <option>Full Stack Web Development</option>
+                  <option>Python Programming</option>
+                  <option>Java Programming</option>
+                  <option>Data Science</option>
+                  <option>AI &amp; Machine Learning</option>
+                  <option>UI/UX Design</option>
+                  <option>Digital Marketing</option>
+                  <option>Cloud Computing</option>
+                  <option>Cyber Security</option>
+                  <option>App Development</option>
+                </select>
+              </div>
+            </div>
+            <label class="form-label small fw-semibold">Message</label>
+            <textarea class="form-control" rows="4" placeholder="Tell us what you're looking for..." required></textarea>
+            <button type="submit" class="btn btn-gradient btn-lg w-100 mt-2">
+              <i class="bi bi-send me-1"></i> Submit
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="col-lg-5 reveal">
+        <div class="contact-info-card">
+          <h4 class="mb-4">Contact Information</h4>
+          <div class="contact-info-item">
+            <i class="bi bi-telephone-fill"></i>
+            <div>
+              <strong class="d-block">Phone</strong>
+              <span>+91 98765 43210</span>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <i class="bi bi-envelope-fill"></i>
+            <div>
+              <strong class="d-block">Email</strong>
+              <span>info@superlearners.in</span>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <i class="bi bi-geo-alt-fill"></i>
+            <div>
+              <strong class="d-block">Address</strong>
+              <span>3rd Floor, Tech Park, Sector 62, Noida, UP, India</span>
+            </div>
+          </div>
+          <div class="map-placeholder">
+            <div class="text-center">
+              <i class="bi bi-map fs-2 d-block mb-1"></i>
+              <small>Google Map Embed Placeholder</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <div class="footer-brand mb-3"><i class="bi bi-mortarboard-fill text-white me-1"></i>Super <span>Learners</span></div>
+        <p class="small">Professional IT Training Institute helping learners become industry-ready through live projects, mentorship and certification.</p>
+        <div class="footer-social mt-3">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-linkedin"></i></a>
+          <a href="#"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-6">
+        <h6>Quick Links</h6>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-6">
+        <h6>Courses</h6>
+        <ul>
+          <li><a href="#courses">Full Stack Development</a></li>
+          <li><a href="#courses">Data Science</a></li>
+          <li><a href="#courses">AI &amp; Machine Learning</a></li>
+          <li><a href="#courses">UI/UX Design</a></li>
+          <li><a href="#courses">Cyber Security</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-6">
+        <h6>Services</h6>
+        <ul>
+          <li><a href="#services">Website Development</a></li>
+          <li><a href="#services">App Development</a></li>
+          <li><a href="#services">Digital Marketing</a></li>
+          <li><a href="#services">Placement Assistance</a></li>
+          <li><a href="#services">Internship Program</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center text-center gap-2">
+      <span>&copy; <span id="year"></span> Super Learners. All Rights Reserved.</span>
+      <span>
+        <a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Terms &amp; Conditions</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ BACK TO TOP ============ -->
+<button id="backToTop"><i class="bi bi-arrow-up"></i></button>
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Custom JS -->
+<script src="script.js"></script>
+
+<!-- ============ DYNAMIC CARD INJECTION ============ -->
+<script>
+// Course data
+const courses = [
+  { icon: 'bi-code-slash', name: 'Full Stack Web Development', desc: 'HTML, CSS, JS, React, Node.js & databases with live projects.', duration: '6 Months', level: 'Beginner to Advanced' },
+  { icon: 'bi-filetype-py', name: 'Python Programming', desc: 'Core Python, OOP, automation & real-world scripting projects.', duration: '3 Months', level: 'Beginner' },
+  { icon: 'bi-cup-hot', name: 'Java Programming', desc: 'Core & Advanced Java, OOP concepts, Spring Boot basics.', duration: '4 Months', level: 'Beginner to Intermediate' },
+  { icon: 'bi-bar-chart-line', name: 'Data Science', desc: 'Statistics, Python, Pandas, visualization & real datasets.', duration: '5 Months', level: 'Intermediate' },
+  { icon: 'bi-cpu', name: 'AI & Machine Learning', desc: 'ML algorithms, neural networks & hands-on model building.', duration: '6 Months', level: 'Advanced' },
+  { icon: 'bi-palette', name: 'UI/UX Design', desc: 'Figma, wireframing, prototyping & design systems.', duration: '3 Months', level: 'Beginner' },
+  { icon: 'bi-megaphone', name: 'Digital Marketing', desc: 'SEO, SEM, social media & performance marketing.', duration: '3 Months', level: 'Beginner' },
+  { icon: 'bi-cloud', name: 'Cloud Computing', desc: 'AWS, Azure fundamentals, deployment & DevOps basics.', duration: '4 Months', level: 'Intermediate' },
+  { icon: 'bi-shield-lock', name: 'Cyber Security', desc: 'Ethical hacking, network security & threat analysis.', duration: '4 Months', level: 'Intermediate' },
+  { icon: 'bi-phone', name: 'App Development', desc: 'Android & cross-platform apps using Flutter/React Native.', duration: '5 Months', level: 'Intermediate' }
+];
+
+const courseGrid = document.getElementById('courseGrid');
+courses.forEach((c, i) => {
+  courseGrid.innerHTML += `
+    <div class="col-lg-4 col-md-6 reveal" style="transition-delay:${(i % 3) * 0.1}s">
+      <div class="glass-card">
+        <div class="card-icon"><i class="bi ${c.icon}"></i></div>
+        <h5>${c.name}</h5>
+        <p>${c.desc}</p>
+        <div class="card-meta">
+          <span><i class="bi bi-clock"></i>${c.duration}</span>
+          <span><i class="bi bi-bar-chart"></i>${c.level}</span>
+        </div>
+        <button class="btn-card">Learn More <i class="bi bi-arrow-right"></i></button>
+      </div>
+    </div>`;
+});
+
+// Service data
+const services = [
+  { icon: 'bi-window-stack', name: 'Website Development', desc: 'Responsive, high-performance websites tailored to your brand.' },
+  { icon: 'bi-phone-vibrate', name: 'Mobile App Development', desc: 'Native & cross-platform mobile apps for Android and iOS.' },
+  { icon: 'bi-terminal', name: 'Software Development', desc: 'Custom software solutions built for scale and reliability.' },
+  { icon: 'bi-graph-up-arrow', name: 'Digital Marketing', desc: 'Data-driven campaigns that grow reach and conversions.' },
+  { icon: 'bi-search', name: 'SEO Optimization', desc: 'Rank higher on search engines with proven SEO strategy.' },
+  { icon: 'bi-brush', name: 'Graphic Designing', desc: 'Creative branding, UI assets & marketing collateral.' },
+  { icon: 'bi-robot', name: 'AI Solutions', desc: 'Custom AI/ML integrations to automate business workflows.' },
+  { icon: 'bi-person-workspace', name: 'Internship Program', desc: 'Hands-on internships with real client projects.' },
+  { icon: 'bi-award', name: 'Certification Training', desc: 'Industry-recognized certifications across technologies.' },
+  { icon: 'bi-briefcase', name: 'Placement Assistance', desc: 'Resume building, mock interviews & hiring partner network.' }
+];
+
+const serviceGrid = document.getElementById('serviceGrid');
+services.forEach((s, i) => {
+  serviceGrid.innerHTML += `
+    <div class="col-lg-4 col-md-6 reveal" style="transition-delay:${(i % 3) * 0.1}s">
+      <div class="glass-card">
+        <div class="card-icon"><i class="bi ${s.icon}"></i></div>
+        <h5>${s.name}</h5>
+        <p>${s.desc}</p>
+        <button class="btn-card">Know More <i class="bi bi-arrow-right"></i></button>
+      </div>
+    </div>`;
+});
+
+// Why choose us data
+const whyUs = [
+  { icon: 'bi-person-badge', title: 'Experienced Trainers', desc: 'Learn from industry professionals with real-world expertise.' },
+  { icon: 'bi-diagram-3', title: 'Industry Projects', desc: 'Work on live projects that mirror real business problems.' },
+  { icon: 'bi-cash-coin', title: 'Affordable Fees', desc: 'Quality education with flexible, budget-friendly pricing.' },
+  { icon: 'bi-briefcase-fill', title: 'Placement Support', desc: 'Dedicated placement cell connecting you to top hiring partners.' },
+  { icon: 'bi-laptop', title: 'Online + Offline', desc: 'Choose the learning mode that fits your schedule best.' },
+  { icon: 'bi-headset', title: '24/7 Student Support', desc: 'Round-the-clock doubt-solving and mentorship support.' },
+  { icon: 'bi-kanban', title: 'Live Projects', desc: 'Build a strong portfolio with hands-on project experience.' },
+  { icon: 'bi-patch-check', title: 'Certificates', desc: 'Get industry-recognized certification upon course completion.' }
+];
+
+const whyGrid = document.getElementById('whyGrid');
+whyUs.forEach((w, i) => {
+  whyGrid.innerHTML += `
+    <div class="col-lg-3 col-md-6 reveal" style="transition-delay:${(i % 4) * 0.1}s">
+      <div class="why-icon-card">
+        <div class="why-icon"><i class="bi ${w.icon}"></i></div>
+        <h6>${w.title}</h6>
+        <p>${w.desc}</p>
+      </div>
+    </div>`;
+});
+
+// Team data
+const team = [
+  { name: 'Rajeev Kumar', role: 'Founder', icon: 'bi-person-fill' },
+  { name: 'Anita Sharma', role: 'CEO', icon: 'bi-person-fill' },
+  { name: 'Vikram Singh', role: 'Senior Developer', icon: 'bi-person-fill' },
+  { name: 'Neha Kapoor', role: 'UI Designer', icon: 'bi-person-fill' },
+  { name: 'Suresh Iyer', role: 'Digital Marketing Expert', icon: 'bi-person-fill' }
+];
+
+const teamGrid = document.getElementById('teamGrid');
+team.forEach((t, i) => {
+  teamGrid.innerHTML += `
+    <div class="col-lg-3 col-md-6 reveal" style="transition-delay:${(i % 4) * 0.1}s">
+      <div class="team-card">
+        <div class="team-img"><i class="bi ${t.icon}"></i></div>
+        <div class="team-info">
+          <h5>${t.name}</h5>
+          <span>${t.role}</span>
+          <div class="team-social">
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>`;
+});
+
+// Re-observe dynamically injected reveal elements
+document.querySelectorAll('.reveal').forEach(el => {
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  obs.observe(el);
+});
+</script>
+
+</body>
+</html>

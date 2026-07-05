@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <h2>COMPLEX FORM</h2>
+<form>
+
+    <fieldset>
+        <legend>Personal Information</legend>
+
+        <label for="name">NAME:</label>
+        <input type="text" name="name" id="name">
+
+        <br><br>
+
+        <label for="email">EMAIL:</label>
+        <input type="text" name="email" id="email">
+
+        <br><br>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" name="phone" id="phone">
+
+        <br><br>
+
+        <label for="date">DATE OF BIRTH:</label>
+        <input type="date" name="date" id="date">
+        
+        <br><br>
+
+        <span>Gender</span>
+
+        <label for="radio1">Male:</label>
+        <input type="radio"  name="radio" id="radio1">
+
+        <label for="radio2">Female:</label>
+        <input type="radio"  name="radio" id="radio2">
+
+        <br><br>
+
+        <label for="country">Country</label>
+        <select name="country" id="country">
+            <option value="india">INDIA</option>
+            <option value="usa">USA</option>
+            <option value="uk">UK</option>
+            <option value="china">CHINA</option>
+        </select>
+
+    </fieldset>
+
+    <fieldset>
+        <legend>Address</legend>
+
+        <label for="address">Street</label>
+        <input type="text" name="address" id="address">
+
+        <br><br>
+
+        <label for="city">City</label>
+        <input type="text" name="city" id="city">
+
+        <br><br>
+
+        <label for="state">State</label>
+        <input type="text" name="state" id="state">
+
+        <br><br>
+
+        <label for="code">Zip Code</label>
+        <input type="text" name="code" id="code">
+
+    </fieldset>
+
+    <fieldset>
+        <legend>Other Information</legend>
+
+        <label for="textarea">Comments:</label>
+        <br>
+        <textarea name="textarea" id="textarea" cols="30" rows="3"></textarea>
+        <br>
+        <label for="x">I agree to the terms of services</label>
+        <input type="checkbox" name="x" id="x">
+    </fieldset>
+
+        
+
+        <input type="submit" name="submit">
+
+   
+
+</form>
+</body>
+</html>

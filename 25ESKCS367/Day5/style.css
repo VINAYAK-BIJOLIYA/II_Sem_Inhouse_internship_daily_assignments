@@ -1,0 +1,275 @@
+:root{
+  --ink:#12173A;
+  --indigo:#2A2F73;
+  --plum:#5B2A6E;
+  --gold:#E8A94C;
+  --parchment:#FAF6EC;
+  --slate:#232338;
+  --line: rgba(18,23,58,0.12);
+}
+
+*{ box-sizing:border-box; }
+
+body{
+  font-family:'Inter', sans-serif;
+  color:var(--slate);
+  min-height:100vh;
+  margin:0;
+  background: linear-gradient(120deg, var(--ink), var(--indigo), var(--plum), var(--indigo), var(--ink));
+  background-size: 400% 400%;
+  animation: driftGradient 22s ease infinite;
+}
+
+@keyframes driftGradient{
+  0%{ background-position: 0% 50%; }
+  50%{ background-position: 100% 50%; }
+  100%{ background-position: 0% 50%; }
+}
+
+@media (prefers-reduced-motion: reduce){
+  body{ animation: none; }
+}
+
+/* ---------- Hero ---------- */
+.hero{
+  padding: 64px 0 36px;
+  text-align:center;
+  color: var(--parchment);
+}
+.hero .eyebrow{
+  font-family:'JetBrains Mono', monospace;
+  letter-spacing: 0.35em;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+.hero h1{
+  font-family:'Fraunces', serif;
+  font-weight:700;
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  margin: 0 0 10px;
+}
+.hero p{
+  color: rgba(250,246,236,0.72);
+  max-width: 520px;
+  margin: 0 auto;
+  font-size: 0.98rem;
+}
+
+/* ---------- Control panel ---------- */
+.control-panel{
+  background: rgba(250,246,236,0.96);
+  border-radius: 18px;
+  padding: 22px 24px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+  position: sticky;
+  top: 14px;
+  z-index: 50;
+  border: 1px solid rgba(255,255,255,0.4);
+}
+.control-label{
+  font-family:'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--indigo);
+  margin-bottom: 6px;
+  display:block;
+}
+.form-control, .form-select{
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 0.92rem;
+}
+.form-control:focus, .form-select:focus{
+  border-color: var(--indigo);
+  box-shadow: 0 0 0 3px rgba(42,47,115,0.15);
+}
+
+.cgpa-chip{
+  font-family:'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  font-weight:600;
+  border: 1px solid var(--indigo);
+  color: var(--indigo);
+  background: transparent;
+  border-radius: 999px;
+  padding: 7px 16px;
+  transition: all 0.2s ease;
+  cursor:pointer;
+}
+.cgpa-chip:hover{
+  background: var(--indigo);
+  color: var(--parchment);
+  transform: translateY(-2px);
+}
+.cgpa-chip.active{
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--ink);
+}
+
+.result-count{
+  font-family:'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  color: rgba(250,246,236,0.75);
+}
+
+/* ---------- Card grid ---------- */
+.card-grid{
+  padding: 34px 0 80px;
+}
+
+.id-card{
+  background: var(--parchment);
+  border-radius: 16px;
+  position: relative;
+  padding: 26px 22px 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+  border: 1px solid rgba(255,255,255,0.5);
+  height: 100%;
+  overflow:hidden;
+}
+.id-card::before{
+  /* perforated top edge */
+  content:"";
+  position:absolute;
+  top:0; left:0; right:0;
+  height: 3px;
+  background-image: radial-gradient(circle, var(--ink) 1.5px, transparent 1.6px);
+  background-size: 12px 3px;
+  background-repeat: repeat-x;
+  opacity: 0.18;
+}
+.id-card:hover{
+  transform: translateY(-8px) scale(1.015);
+  box-shadow: 0 26px 50px rgba(0,0,0,0.4);
+}
+
+.punch-hole{
+  position:absolute;
+  top: 14px; right: 18px;
+  width: 14px; height:14px;
+  border-radius:50%;
+  background: rgba(18,23,58,0.85);
+  box-shadow: inset 0 2px 3px rgba(0,0,0,0.5);
+}
+
+.avatar-badge{
+  width: 58px; height:58px;
+  border-radius: 50%;
+  display:flex; align-items:center; justify-content:center;
+  font-family:'Fraunces', serif;
+  font-weight:700;
+  font-size: 1.3rem;
+  color: var(--parchment);
+  background: linear-gradient(135deg, var(--indigo), var(--plum));
+  flex-shrink:0;
+  transition: transform 0.3s ease;
+}
+.id-card:hover .avatar-badge{
+  transform: rotate(-6deg) scale(1.06);
+}
+
+.stu-name{
+  font-family:'Fraunces', serif;
+  font-weight:600;
+  font-size: 1.18rem;
+  margin: 0 0 2px;
+  color: var(--ink);
+}
+.stu-id{
+  font-family:'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  color: rgba(35,35,56,0.6);
+  letter-spacing: 0.03em;
+}
+.stu-dept{
+  font-size: 0.82rem;
+  color: rgba(35,35,56,0.65);
+  margin-top: 4px;
+}
+
+.cgpa-seal{
+  position:absolute;
+  bottom: 18px; right: 18px;
+  width: 54px; height:54px;
+  border-radius:50%;
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  font-family:'JetBrains Mono', monospace;
+  font-weight:700;
+  color: var(--ink);
+  border: 2px dashed rgba(18,23,58,0.35);
+  line-height: 1;
+}
+.cgpa-seal .num{ font-size: 1.05rem; }
+.cgpa-seal .lbl{ font-size: 0.5rem; letter-spacing: 0.08em; opacity: 0.7; margin-top:2px;}
+.seal-gold{ background: radial-gradient(circle at 35% 30%, #FCE3AE, var(--gold)); border-color: transparent; }
+.seal-silver{ background: radial-gradient(circle at 35% 30%, #F1F1F5, #C9CBD8); border-color: transparent; }
+.seal-bronze{ background: radial-gradient(circle at 35% 30%, #E9C7A9, #C6905F); border-color: transparent; }
+
+.toggle-details-btn{
+  font-family:'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--indigo);
+  background: none;
+  border: none;
+  padding: 0;
+  margin-top: 14px;
+  display:inline-flex;
+  align-items:center;
+  gap: 6px;
+  cursor:pointer;
+}
+.toggle-details-btn .arrow{
+  transition: transform 0.25s ease;
+  display:inline-block;
+}
+.toggle-details-btn.open .arrow{
+  transform: rotate(180deg);
+}
+
+.details-panel{
+  display:none;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px dashed rgba(18,23,58,0.2);
+  font-size: 0.86rem;
+}
+.details-panel dt{
+  font-family:'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: rgba(35,35,56,0.5);
+  margin-top: 8px;
+}
+.details-panel dd{ margin: 2px 0 0; }
+.skill-tag{
+  display:inline-block;
+  font-size: 0.72rem;
+  background: rgba(42,47,115,0.08);
+  color: var(--indigo);
+  border-radius: 999px;
+  padding: 3px 10px;
+  margin: 3px 4px 0 0;
+}
+
+.empty-state{
+  text-align:center;
+  color: rgba(250,246,236,0.85);
+  padding: 60px 20px;
+  font-family:'Fraunces', serif;
+  font-size: 1.3rem;
+}
+.empty-state .sub{
+  font-family:'Inter', sans-serif;
+  font-size: 0.9rem;
+  color: rgba(250,246,236,0.6);
+  margin-top: 6px;
+}
